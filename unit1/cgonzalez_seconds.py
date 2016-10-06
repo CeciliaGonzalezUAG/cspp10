@@ -1,0 +1,6 @@
+s=input()
+s=int(s)
+z=int(s%60)
+m=int(s/60)
+h=int(m/60)
+print("{} seconds is {} hours, {} minute, and {} seconds.".format(s,h,m,z))

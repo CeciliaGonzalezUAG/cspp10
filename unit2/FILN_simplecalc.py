@@ -1,4 +1,4 @@
-equation=input("Enter and equation:")
+equation=input("Enter an equation:")
 operation=equation[1]
 number1=float(equation[0])
 number2=float(equation[2])

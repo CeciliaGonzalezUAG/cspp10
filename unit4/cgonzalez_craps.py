@@ -20,20 +20,21 @@ rounds=int(input("How many rounds would you like to play?: "))
 def get_rounds(rounds):
     return rounds;
 
+
 dice1=random.randint(1,6)
 dice2=random.randint(1,6)
+roll1=dice1+dice2
+print (roll1)
     
-def roll_dice(dice1,dice2):
-    roll1=dice1+dice2
-    print roll1;
-    
-def game_winner(roll,my_total,bet):
+def game_winner(roll,my_total,bet,point_number):
     if roll==7 or roll==11:
         my_total=bet+my_total
         print("You win!")
+        return "win"
     elif roll==2 or roll==3 or roll==12:
         my_total=my_total-bet
         print("You Lose!")
+        return "lost"
     else:
         point_number=roll
         dice3=random.randint(1,6)
@@ -42,15 +43,11 @@ def game_winner(roll,my_total,bet):
         return roll2;
 
 def  point_round(point_number,roll2,my_total,bet):
-    for point_number in range(point_number):
+    while point_number != 7:
         if roll2==point_number:
             my_total=my_total+bet
             print("You win")
-        elif roll2==7:
-            my_total=my_total-bet
-            print("You lose")
-        else:
-            return point_number;
+            return "you win"
         
         
     

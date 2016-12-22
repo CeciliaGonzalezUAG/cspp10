@@ -1,5 +1,10 @@
 import random
 
+def bet(bank_account):
+    if bet>bank_account:
+        return "Not enough money"
+    elif bet< 0:
+        return "You can't bet negative money!"
 
 def roll():
     dice1=random.randint(1,6)
@@ -11,11 +16,9 @@ def roll():
 def phase_one(roll1,point_number,bet,bank_account):
     if roll1==7 or roll1==11:
         bank_account=bet+bank_account
-        print("You win!")
         return "You win"
     elif roll1==2 or roll1==3 or roll1==12:
         bank_account=bank_account-bet
-        print("You Lose!")
         return "you lose"
     else:
         point_number=roll1
@@ -34,7 +37,6 @@ def point_round(point_number,roll2, bank_account,bet,point):
     while roll2 != 7 :
         if roll2== point_number:
             bank_account=bank_account+bet
-            print("you win")
             return "you win"
         elif roll2==7:
             bank_account=bank_account-bet

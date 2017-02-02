@@ -20,11 +20,11 @@ def get_p1_move():
 def get_comp_move(): 
     #code here
     computer=random.randint(1,3)
-    if computer =='1':
+    if computer ==1:
         return 'r'
-    elif computer =='2':
+    elif computer ==2:
         return 'p'
-    elif computer =='3':
+    elif computer ==3:
         return 's'
     
 #function name: get_rounds

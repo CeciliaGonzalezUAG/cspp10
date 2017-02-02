@@ -5,6 +5,8 @@ def bet(bank_account):
         return "Not enough money"
     elif bet< 0:
         return "You can't bet negative money!"
+    elif bet==0:
+        return"Place valid amount"
 
 def roll():
     dice1=random.randint(1,6)

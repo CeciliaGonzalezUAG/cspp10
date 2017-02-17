@@ -14,16 +14,15 @@ def Dictionary_add():
         else:
             dictionary[user_key]=user_value
             print("is not in schedule, now added")
-
-
-def Dictionary_remove():
-    if user_input=="remove key":
+    elif user_input=="remove key":
         remove_key=input("Which key?: ")
         if remove_key in dictionary:
-            print("is in schedule")
+            del dictionary[remove_key]
+            print("is removed")
         else:
             dictionary[user_key]=user_value
-            print("is not in schedule, now added")
+            print("is not in schedule")
+        
         
         
 # for key in dictionary:

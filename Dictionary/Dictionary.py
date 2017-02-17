@@ -17,4 +17,27 @@ schedule={
     "C":"AP Chemistry",
     "D":"Global History"
 }
-print(schedule['B'])
+
+schedule["F"]="SE9"
+print(schedule["f"])
+
+
+#Add a key-value pair where the key is "E" and
+#the value is "holla"
+schedule['E'] = "holla"
+print(schedule['E'])
+
+#only checks if it exists as a key NOT a value
+
+if "E" in schedule:
+    print("is in schedule")
+else:
+    print("is not in schedule")
+    
+#how to check if a value exists?
+for key in schedule:
+    if schedule[key] == "SE12":
+        print("Exists as value!")
+        break
+    else: #This only happens if for loop doesn't break
+        print("does not exist as value!")
